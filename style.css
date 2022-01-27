@@ -1,0 +1,228 @@
+body{
+    flex-direction: column;
+    font-family: 'Space Mono', monospace !important;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+padding: 0;
+background-color:hsl(185, 41%, 84%) ;
+box-sizing: border-box;
+}
+
+#logo{
+    margin-bottom: 50px ;
+}
+
+
+button{
+    font-family: 'Space Mono', monospace;
+}
+
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+}
+
+.container{
+    /* box-shadow: 0 0 30px 1px #333; */
+    height: 25rem;
+    width: 50rem;
+    border-radius: 20px;
+background-color: hsl(0, 0%, 100%)
+;
+}
+.parts{
+    border-radius: 20px;
+    margin: 3%;
+    background-color: hsl(183, 100%, 15%);
+    width: 25rem;
+    color: white;
+    height: 20rem;
+    padding: 20px ;
+}
+
+#first-part{
+    background-color: transparent;
+    color:   hsl(183, 100%, 15%);
+
+}
+
+small{
+    color: hsl(186, 14%, 43%);
+}
+#costum{
+    margin: 5px;
+    padding: 3px;
+    width:4.5em;
+    border: none;
+    text-align: right;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: hsl(189, 41%, 97%);
+
+}
+#costum0:focus{
+    outline: none;
+}
+/* remove arrow in number input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+#costum::placeholder{
+    text-align: center;
+}
+::placeholder{
+    color: hsl(172, 67%, 45%);
+
+}
+
+input{
+    font-family: 'Space Mono', monospace !important;
+padding: 3px;
+    font-size: 24px;
+    color: hsl(172, 67%, 45%);
+    border: none;
+    text-align: right;
+    background-color: hsl(189, 41%, 97%);
+}
+input:focus{
+    outline: none;
+}
+
+.input:focus-within{
+          border: 2px solid hsl(172, 67%, 45%);
+}
+.input{
+    background-color: hsl(189, 41%, 97%);
+    padding: 2px;
+    font-size: 24px;
+    border-radius: 5px;
+}
+button{
+    color: white;
+    font-size: 20px;
+    margin: 5px;
+    padding: 10px 0;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    border: none;
+}
+
+.select{
+    margin: 2em 0;
+}
+
+
+.tiptitle{
+    padding: 0;
+    margin: 0;
+}
+.tiptitle p{
+    padding: 0;
+    margin: 0;
+}
+.tip-amo{
+    padding: 25px 0;
+}
+
+.totalamo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: hsl(172, 67%, 45%);
+}
+.totalamo img{
+    margin: 0;
+    padding: 0;
+    height: 1.7rem !important;
+    width:  1.5rem!important;
+}
+
+.reset{
+    margin: 50px 0;
+    text-align: center;
+    width: 100% !important;
+}
+.reset button{
+    width: 90%;
+    background-color:  hsl(172, 67%, 45%);
+    color:  hsl(183, 100%, 15%);
+    border-radius: 5px;
+}
+
+
+button:focus{
+    background-color:  hsl(172, 67%, 45%);
+}
+.reset button:focus{
+    background-color:   hsl(185, 41%, 84%);
+}
+.cantzero{
+    position: relative;
+    border:1px solid red;
+}
+.cantzero::before{
+    content: "Can't be zero";
+    color: red;
+    position: absolute;
+    right: 0;
+    font-size: 15px;
+    top: -24px;
+}
+/* 
+#part2{
+    box-shadow: 0 0 30px 3px hsl(183, 100%, 15%);
+} */
+
+
+@media (max-width:800px){
+    body{
+        height: 100%;
+    }
+    #logo{
+        margin-top: 50px;
+    }
+    .container{
+        flex-direction: column;
+        margin: 0 30px;
+        width: 80%;
+        height: fit-content;
+    }
+}
+
+@media (max-width:550px ){
+    .container{
+        width: 100%;
+    }
+    #part2{
+        width:80% !important;
+    }
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #first-part{
+        width: 80%;
+        height: fit-content;
+    }
+input{
+    width: 100%;
+}
+}
